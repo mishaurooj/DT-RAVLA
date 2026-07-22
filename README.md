@@ -38,37 +38,6 @@ A  = Architecture
 
 ## Repository structure
 
-```text
-DT-RAVLA/
-├── Code/
-│   ├── 01_multi_dataset_analysis.py
-│   ├── 01_swat_dataset_analysis.py
-│   ├── aanalyze-sawt.py
-│   ├── diagnose_wadi.py
-│   ├── run_all.py
-│   ├── evaluate_pretrained_all.py
-│   ├── evaluate_pretrained_consistent_subtables.py
-│   └── readme.md
-├── Dataset/
-│   ├── SWaT/
-│   │   ├── merged.csv
-│   │   ├── normal.csv
-│   │   └── attack.csv
-│   └── WADI/
-│       ├── WADI_14days_new.csv
-│       └── WADI_attackdataLABLE.csv
-├── Results/
-│   ├── models/
-│   ├── tables/
-│   ├── figures/
-│   ├── diagnostics/
-│   └── Reevaluation/
-├── DatasetAnalysis/
-├── Model-Results/
-├── LICENSE
-└── README.md
-```
-
 The training and evaluation scripts currently use:
 
 ```python
