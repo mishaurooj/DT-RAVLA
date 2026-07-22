@@ -1,6 +1,6 @@
 # DT-RAVLA
 
-**Dual-Temporal Resilient Variational Learning Architecture for industrial cyber-attack detection**
+**DT-RAVLA: A Dual-Track Robust Attention-Based Variable-Sensor Learning Architecture for Industrial Cyberattack Detection**
 
 DT-RAVLA is a compact temporal learning framework for anomaly detection in industrial control systems. The repository contains dataset analysis, model training, checkpoint evaluation, cross-process testing, robustness analysis, calibration, efficiency measurement, ablation support, and publication-ready table and figure generation for the SWaT and WADI datasets.
 
