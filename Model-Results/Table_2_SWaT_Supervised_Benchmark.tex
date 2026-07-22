@@ -1,0 +1,16 @@
+\begin{table*}[t]
+\centering
+\caption{Supervised SWaT benchmark under one frozen preprocessing, windowing, validation, and test protocol. Deterministic pretrained baselines are reported once; DT-RAVLA is reported as mean $\pm$ standard deviation over five seeds.}
+\label{tab:swat_supervised_benchmark}
+\renewcommand{\arraystretch}{1.12}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lcccccccc}
+\hline
+Model & Runs & Accuracy & BAcc. & Precision & Recall & F1 & AUPRC & MCC \\
+\hline
+Logistic Regression & 1 & 0.976 & 0.682 & 1.000 & 0.363 & 0.533 & 0.440 & 0.595 \\
+Random Forest & 1 & 0.963 & 0.511 & 1.000 & 0.022 & 0.043 & 0.454 & 0.146 \\
+DT-RAVLA & 5 & 0.976 $\pm$ 0.001 & 0.686 $\pm$ 0.010 & 1.000 $\pm$ 0.000 & 0.371 $\pm$ 0.019 & 0.541 $\pm$ 0.020 & 0.464 $\pm$ 0.016 & 0.602 $\pm$ 0.016 \\
+\hline
+\end{tabular}
+\end{table*}

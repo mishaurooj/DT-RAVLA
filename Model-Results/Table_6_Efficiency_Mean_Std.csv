@@ -1,0 +1,2 @@
+Dataset,Model,Parameters_Mean,Model_Size_MB_Mean,Latency_ms_per_window_Mean,Windows_per_second_Mean,Parameters_Std,Model_Size_MB_Std,Latency_ms_per_window_Std,Windows_per_second_Std,Runs
+SWaT,DT-RAVLA-Supervised,614274.0,2.360433578491211,1.7786668001208454,562.4247665544616,0.0,0.0,0.038274681199429963,11.964001689577966,5

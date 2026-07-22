@@ -1,0 +1,21 @@
+\begin{table*}[t]
+\centering
+\caption{Robustness under controlled corruption. Every condition uses the threshold selected on clean validation data.}
+\label{tab:robustness}
+\renewcommand{\arraystretch}{1.12}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lllccccc}
+\hline
+Dataset & Model & Condition & Precision & Recall DR & FPR FAR & F1 & MCC \\
+\hline
+SWaT & DT-RAVLA-Supervised & Bias_10pct & 1.000 $\pm$ 0.000 & 0.158 $\pm$ 0.185 & 0.000 $\pm$ 0.000 & 0.239 $\pm$ 0.267 & 0.318 $\pm$ 0.258 \\
+SWaT & DT-RAVLA-Supervised & Clean & 1.000 $\pm$ 0.000 & 0.371 $\pm$ 0.019 & 0.000 $\pm$ 0.000 & 0.541 $\pm$ 0.020 & 0.602 $\pm$ 0.016 \\
+SWaT & DT-RAVLA-Supervised & Frozen_10pct & 1.000 $\pm$ 0.000 & 0.374 $\pm$ 0.023 & 0.000 $\pm$ 0.000 & 0.544 $\pm$ 0.024 & 0.604 $\pm$ 0.018 \\
+SWaT & DT-RAVLA-Supervised & Gaussian_10pct & 1.000 $\pm$ 0.000 & 0.370 $\pm$ 0.019 & 0.000 $\pm$ 0.000 & 0.540 $\pm$ 0.021 & 0.601 $\pm$ 0.016 \\
+SWaT & DT-RAVLA-Supervised & Gaussian_5pct & 1.000 $\pm$ 0.000 & 0.371 $\pm$ 0.018 & 0.000 $\pm$ 0.000 & 0.541 $\pm$ 0.020 & 0.601 $\pm$ 0.015 \\
+SWaT & DT-RAVLA-Supervised & Missing_10pct & 0.800 $\pm$ 0.447 & 0.002 $\pm$ 0.002 & 0.000 $\pm$ 0.000 & 0.004 $\pm$ 0.005 & 0.037 $\pm$ 0.028 \\
+SWaT & DT-RAVLA-Supervised & Missing_20pct & 0.000 $\pm$ 0.000 & 0.000 $\pm$ 0.000 & 0.000 $\pm$ 0.000 & 0.000 $\pm$ 0.000 & 0.000 $\pm$ 0.000 \\
+SWaT & DT-RAVLA-Supervised & Temporal_Jitter & 1.000 $\pm$ 0.000 & 0.371 $\pm$ 0.019 & 0.000 $\pm$ 0.000 & 0.541 $\pm$ 0.020 & 0.602 $\pm$ 0.016 \\
+\hline
+\end{tabular}
+\end{table*}

@@ -1,0 +1,15 @@
+\begin{table*}[t]
+\centering
+\caption{Model size and inference efficiency measured on the evaluation device.}
+\label{tab:efficiency}
+\renewcommand{\arraystretch}{1.12}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llcccc}
+\hline
+Dataset & Model & Parameters & Model Size MB & Latency ms per window & Windows per second \\
+\hline
+SWaT & DT-RAVLA-Supervised & 614274.000 $\pm$ 0.000 & 2.360 $\pm$ 0.000 & 1.568 $\pm$ 0.433 & 705.768 $\pm$ 308.153 \\
+WADI & DT-RAVLA-OneClass & 616467.000 $\pm$ 0.000 & 2.369 $\pm$ 0.000 & 1.406 $\pm$ 0.512 & 811.516 $\pm$ 348.378 \\
+\hline
+\end{tabular}
+\end{table*}

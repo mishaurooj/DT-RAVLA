@@ -1,0 +1,63 @@
+% Add \usepackage{subcaption} in the document preamble.
+\begin{table*}[t]
+\centering
+\caption{Comprehensive evaluation of DT-RAVLA under consistent benchmark, ablation, generalisation, robustness, and efficiency protocols.}
+\label{tab:comprehensive_results}
+\renewcommand{\arraystretch}{1.10}
+\setlength{\tabcolsep}{3.2pt}
+
+\begin{subtable}{\textwidth}
+\centering
+\caption{Supervised SWaT benchmark and true architectural ablations.}
+\label{tab:benchmark_ablation_subtable}
+\begin{tabular}{llcccccc}
+\hline
+Group & Configuration & BAcc. & Precision & Recall & F1 & AUPRC & MCC \\
+\hline
+Benchmark & Logistic Regression & 0.682 & 1.000 & 0.363 & 0.533 & 0.440 & 0.595 \\
+Benchmark & Random Forest & 0.511 & 1.000 & 0.022 & 0.043 & 0.454 & 0.146 \\
+Benchmark & DT-RAVLA & 0.686 $\pm$ 0.010 & 1.000 $\pm$ 0.000 & 0.371 $\pm$ 0.019 & 0.541 $\pm$ 0.020 & 0.464 $\pm$ 0.016 & 0.602 $\pm$ 0.016 \\
+Ablation & Full & 0.686 $\pm$ 0.010 & 1.000 $\pm$ 0.000 & 0.371 $\pm$ 0.019 & 0.541 $\pm$ 0.020 & 0.464 $\pm$ 0.016 & 0.602 $\pm$ 0.016 \\
+\hline
+\end{tabular}
+\end{subtable}
+\vspace{1.5mm}
+
+\begin{subtable}{\textwidth}
+\centering
+\caption{Cross-process generalisation and corruption robustness using common detection fields.}
+\label{tab:generalisation_robustness_subtable}
+\begin{tabular}{lllccccc}
+\hline
+Group & Setting & Condition & Precision & Recall & Specificity & F1 & MCC \\
+\hline
+Generalisation & SWaT\_to\_WADI & Zero-shot source threshold & 0.001 $\pm$ 0.002 & 0.002 $\pm$ 0.005 & 0.956 $\pm$ 0.073 & 0.001 $\pm$ 0.003 & -0.032 $\pm$ 0.040 \\
+Generalisation & SWaT\_to\_WADI & Target-normal calibrated & 0.017 $\pm$ 0.015 & 0.137 $\pm$ 0.156 & 0.654 $\pm$ 0.137 & 0.030 $\pm$ 0.027 & -0.101 $\pm$ 0.031 \\
+Generalisation & SWaT\_to\_WADI & One-percent few-shot calibration & 0.049 $\pm$ 0.005 & 0.931 $\pm$ 0.153 & 0.031 $\pm$ 0.059 & 0.093 $\pm$ 0.010 & -0.018 $\pm$ 0.063 \\
+Robustness & SWaT & Clean & 1.000 $\pm$ 0.000 & 0.371 $\pm$ 0.019 & 1.000 $\pm$ 0.000 & 0.541 $\pm$ 0.020 & 0.602 $\pm$ 0.016 \\
+Robustness & SWaT & Gaussian\_5pct & 1.000 $\pm$ 0.000 & 0.371 $\pm$ 0.018 & 1.000 $\pm$ 0.000 & 0.541 $\pm$ 0.020 & 0.601 $\pm$ 0.015 \\
+Robustness & SWaT & Gaussian\_10pct & 1.000 $\pm$ 0.000 & 0.370 $\pm$ 0.019 & 1.000 $\pm$ 0.000 & 0.540 $\pm$ 0.021 & 0.601 $\pm$ 0.016 \\
+Robustness & SWaT & Missing\_10pct & 0.800 $\pm$ 0.447 & 0.002 $\pm$ 0.002 & 1.000 $\pm$ 0.000 & 0.004 $\pm$ 0.005 & 0.037 $\pm$ 0.028 \\
+Robustness & SWaT & Missing\_20pct & 0.000 $\pm$ 0.000 & 0.000 $\pm$ 0.000 & 1.000 $\pm$ 0.000 & 0.000 $\pm$ 0.000 & 0.000 $\pm$ 0.000 \\
+Robustness & SWaT & Frozen\_10pct & 1.000 $\pm$ 0.000 & 0.374 $\pm$ 0.023 & 1.000 $\pm$ 0.000 & 0.544 $\pm$ 0.024 & 0.604 $\pm$ 0.018 \\
+Robustness & SWaT & Bias\_10pct & 1.000 $\pm$ 0.000 & 0.158 $\pm$ 0.185 & 1.000 $\pm$ 0.000 & 0.239 $\pm$ 0.267 & 0.318 $\pm$ 0.258 \\
+Robustness & SWaT & Temporal\_Jitter & 1.000 $\pm$ 0.000 & 0.371 $\pm$ 0.019 & 1.000 $\pm$ 0.000 & 0.541 $\pm$ 0.020 & 0.602 $\pm$ 0.016 \\
+\hline
+\end{tabular}
+\end{subtable}
+\vspace{1.5mm}
+
+\begin{subtable}{0.78\textwidth}
+\centering
+\caption{Supervised DT-RAVLA computational efficiency.}
+\label{tab:efficiency_subtable}
+\begin{tabular}{lcccc}
+\hline
+Model & Parameters & Size (MB) & Latency (ms) & Windows/s \\
+\hline
+DT-RAVLA & 614,274 & 2.360 $\pm$ 0.000 & 1.779 $\pm$ 0.038 & 562.425 $\pm$ 11.964 \\
+\hline
+\end{tabular}
+\end{subtable}
+
+\end{table*}
