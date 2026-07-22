@@ -6,6 +6,14 @@ DT-RAVLA is a compact temporal learning framework for anomaly detection in indus
 
 The implementation converts each multivariate process record into an **18-dimensional semantic token**, groups tokens into temporal windows, and processes each window with a shared Transformer encoder. This design keeps the neural input dimension fixed even when the source datasets contain different numbers of process variables.
 
+D  = Dual
+T  = Track
+R  = Robust
+A  = Attention-Based
+V  = Variable-Sensor
+L  = Learning
+A  = Architecture
+
 ---
 
 ## Main features
